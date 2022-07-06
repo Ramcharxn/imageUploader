@@ -14,7 +14,7 @@ if (process.env.NODE_ENV == "production"){
   app.use(express.static("client/build"))
 }
 
-mongoose.connect('')
+mongoose.connect('mongodb+srv://imageUploader:imageUploader@cluster0.kxxn1.mongodb.net/?retryWrites=true&w=majority')
 .then(() => console.log('db connected'))
 .catch(err => console.log(err.message))
 
